@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './search.css';
-import {default as search} from '../Assets/img/search.svg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +13,7 @@ export default class Search extends Component {
     }
 
     onSearch = () => {
-        this.setState( (prevState,prevProps) => {
+        this.setState( (prevState) => {
             return {
                 searchBox: prevState.searchBox+"active ",
                 searchIcon: prevState.searchIcon+"active ",
@@ -25,7 +24,7 @@ export default class Search extends Component {
     }
 
     onCancel = () => {
-        this.setState( (prevState,prevProps) => {
+        this.setState( () => {
             return {
                 searchBox: "search-box ",
                 searchInput: "search-input ",
